@@ -1,7 +1,7 @@
 -- Clean slate
-DROP TABLE IF EXISTS board_state;
-DROP TABLE IF EXISTS game_state;
-DROP TABLE IF EXISTS games;
+DROP TABLE IF EXISTS board_state CASCADE;
+DROP TABLE IF EXISTS game_state CASCADE;
+DROP TABLE IF EXISTS games CASCADE;
 
 -- ============================================================
 -- Table: games
