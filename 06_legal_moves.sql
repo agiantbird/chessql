@@ -1,3 +1,4 @@
+-- OBSOLETE: moved into setup.sql
 -- Creates views that:
 ---- 1. Combine all pseudo-legal moves into one set
 ---- 2. Determine if a given side's king is under attack on a given board

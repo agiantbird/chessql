@@ -1,3 +1,4 @@
+-- OBSOLETE: moved into setup.sql
 -- Create function make_move(from_sq, to_sq) that:
 --		1. Validates the move against the legal_moves view
 --		2. Inserts a new board state with the piece moved
