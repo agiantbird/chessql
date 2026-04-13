@@ -318,7 +318,12 @@ sliding_attacks AS (
 			SELECT rw.move_id,
 				rw.current_file_ascii + d.file_step,
 				rw.current_rank + d.rank_step,
-				TRUE
+				EXISTS (
+					SELECT 1 FROM hypothetical_boards hb3
+					WHERE hb3.move_id = rw.move_id
+						AND ascii(hb3.file) = rw.current_file_ascii + d.file_step
+						AND hb3.rank = rw.current_rank + d.rank_step
+				)
 			FROM ray_walk rw
 			WHERE rw.current_file_ascii + d.file_step BETWEEN ascii('a') AND ascii('h')
 				AND rw.current_rank + d.rank_step BETWEEN 1 AND 8
